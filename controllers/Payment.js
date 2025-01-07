@@ -7,13 +7,13 @@ const crypto = require('crypto')
 require('dotenv').config();
 
 //purchasing multiple courses in one go without using web hook
+let bundle = null;
 exports.capturePayment = async(req,res) =>{
 
     const {amount,bundleName,isTimeUp} = req.body;
     // console.log(amount)
 
-    let bundle = null;
-
+    // console.log(bundles);
     // set the amount
     bundles.forEach(bd => {
         if(bd.bundleName === bundleName){
@@ -109,7 +109,7 @@ exports.verifySignature = async(req,res) =>{
 
         // console.log(req.body);
         //if payment verified now send package link
-        const packageLink = "hello there";
+        const packageLink = bundle.link;
         await sendPackageLink(packageLink,{name,email},res);
         return res.status(200).json({ success: true, message: "Payment Verified" })
     }

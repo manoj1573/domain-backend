@@ -71,7 +71,7 @@ exports.packageMailTemplate = (packageLink, name) => {
             <div class="message">Your Package By Maverick</div>
             <div class="body">
                 <p>Dear ${name},</p>
-                <p>Here is the Link of Package. <a src=${packageLink} class="highlight">Link</a></p>
+                <p>Here is the Link of Package. <a href=${packageLink} class="highlight">Link</a></p>
             </div>
             
         </div>
