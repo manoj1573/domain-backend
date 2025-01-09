@@ -4,7 +4,7 @@ exports.packageMailTemplate = (packageLink, name) => {
     
     <head>
         <meta charset="UTF-8">
-        <title>Course Registration Confirmation</title>
+        <title>Package Link by 99bookpro</title>
         <style>
             body {
                 background-color: #ffffff;
@@ -68,7 +68,7 @@ exports.packageMailTemplate = (packageLink, name) => {
     <body>
         <div class="container">
            
-            <div class="message">Your Package By Maverick</div>
+            <div class="message">Your Package By 99bookpro</div>
             <div class="body">
                 <p>Dear ${name},</p>
                 <p>Here is the Link of Package. <a href=${packageLink} class="highlight">Link</a></p>

@@ -128,7 +128,7 @@ const sendPackageLink = async(packageLink,{name,email},res)=>{
         const body = packageMailTemplate(packageLink,name);
         const mailResponse = await mailSender(
             email,
-            `Package Link - Maverick`,
+            `Package Link - 99bookpro`,
             body
         );
         
